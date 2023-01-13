@@ -8,6 +8,13 @@
   </head>
   <body>
     <h1>using links to send an HTTP request</h1>
-    <a href="./magic.php?magic_data=this+is+magic+(or+not)">Link</a>
+    <!-- <a href="./magic.php?magic_data=this+is+magic+(or+not)">Link</a> -->
+    <!-- 1. send HTTP request and place data in with link -->
+    <form action="./magic.php" method="POST">
+      <input type="hidden" name="magic_data" value="Hello Josh Gumerove" />
+      <button type="submit">Submit Hidden Data</button>
+      <!-- note how data still appears in the URL when doing this if we use a GET request-->
+      <!-- note action defines where to send the request to (property on the form) -->
+    </form>
   </body>
 </html>
